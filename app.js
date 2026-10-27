@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors')
 const app = express() 
 const fruits = require('./routes/fruitsRoutes')
 
+app.use(cors())
 app.use(express.json())
 app.use('/fruits', fruits)
 
